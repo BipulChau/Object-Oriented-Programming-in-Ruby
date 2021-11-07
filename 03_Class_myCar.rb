@@ -1,10 +1,11 @@
 class MyCar
   attr_accessor :color
   attr_reader :year
+  attr_reader :design
 
-  def initialize(year, model, color)
+  def initialize(year, design, color)
     @year = year
-    @model = model
+    @design = design
     @color = color
     @current_speed = 0
   end
@@ -32,20 +33,33 @@ class MyCar
     self.color = color
       puts "Your new #{color} paint job looks great!"
   end
+
+  def self.gas_mileage(gallons, miles)
+    puts "#{miles/gallons} miles per gallons of gas "
+  end
+
+  def to_s
+    puts "My car is #{color}, #{year}, #{design} !"
+  end
 end
 
+# MyCar.gas_mileage(13, 351)
+
+
 sentra = MyCar.new(2016, "sentra", "Gray")
-sentra.speed_up(20)
-sentra.current_speed
-sentra.speed_up(20)
-sentra.current_speed
-sentra.speed_up(20)
-sentra.current_speed
-sentra.brake(30)
-sentra.current_speed
-sentra.shut_down
-sentra.current_speed
-sentra.color = "Silver"
-puts sentra.color
-puts sentra.year
-sentra.spray_paint("Golden Brown")
+puts sentra
+# sentra.gas_mileage(10, 200)
+# sentra.speed_up(20)
+# sentra.current_speed
+# sentra.speed_up(20)
+# sentra.current_speed
+# sentra.speed_up(20)
+# sentra.current_speed
+# sentra.brake(30)
+# sentra.current_speed
+# sentra.shut_down
+# sentra.current_speed
+# sentra.color = "Silver"
+# puts sentra.color
+# puts sentra.year
+# sentra.spray_paint("Golden Brown")
