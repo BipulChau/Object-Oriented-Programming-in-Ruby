@@ -10,6 +10,8 @@ class GoodDog
     self.age = a * DOG_YEARS
   end
 
+  def change
+
   def self.total_number_of_dogs
     @@number_of_dogs
   end
